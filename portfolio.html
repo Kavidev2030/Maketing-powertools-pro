@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - PowerTools Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        accent: '#ff4d4d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">PowerTools Pro</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-accent">Home</a>
+                    <a href="services.html" class="hover:text-accent">Services</a>
+                    <a href="portfolio.html" class="hover:text-accent border-b-2 border-accent">Portfolio</a>
+                    <a href="contact.html" class="hover:text-accent">Contact Us</a>
+                    <a href="about.html" class="hover:text-accent">About Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 pb-4">
+            <div class="container mx-auto px-4 py-2 space-y-3">
+                <a href="index.html" class="block hover:text-accent">Home</a>
+                <a href="services.html" class="block hover:text-accent">Services</a>
+                <a href="portfolio.html" class="block text-accent">Portfolio</a>
+                <a href="contact.html" class="block hover:text-accent">Contact Us</a>
+                <a href="about.html" class="block hover:text-accent">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Portfolio</h1>
+            <p class="text-xl max-w-3xl mx-auto">Explore our completed projects and see how our tools have helped professionals and DIY enthusiasts achieve exceptional results.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active bg-accent text-white py-2 px-6 rounded-full hover:bg-red-600 transition duration-300" data-filter="all">All Projects</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 py-2 px-6 rounded-full hover:bg-gray-300 transition duration-300" data-filter="construction">Construction</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 py-2 px-6 rounded-full hover:bg-gray-300 transition duration-300" data-filter="woodworking">Woodworking</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 py-2 px-6 rounded-full hover:bg-gray-300 transition duration-300" data-filter="renovation">Renovation</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 py-2 px-6 rounded-full hover:bg-gray-300 transition duration-300" data-filter="industrial">Industrial</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="construction">
+                    <img src="https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Commercial Building Project" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Commercial Building Project</h3>
+                        <p class="text-gray-600 mb-4">A major commercial construction project utilizing our heavy-duty power tools and equipment.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Construction</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="woodworking">
+                    <img src="https://images.unsplash.com/photo-1565298931044-63c9b2405d2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Custom Furniture Workshop" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Custom Furniture Workshop</h3>
+                        <p class="text-gray-600 mb-4">Precision woodworking tools used to create bespoke furniture pieces for a high-end client.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Woodworking</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Home Renovation" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Complete Home Renovation</h3>
+                        <p class="text-gray-600 mb-4">A full-scale home renovation project showcasing our versatile tool solutions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Renovation</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="industrial">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Industrial Facility Maintenance" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Industrial Facility Maintenance</h3>
+                        <p class="text-gray-600 mb-4">Specialized tools for maintaining and repairing industrial equipment and machinery.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Industrial</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="construction">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bridge Construction" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Bridge Construction Project</h3>
+                        <p class="text-gray-600 mb-4">Heavy-duty tools and equipment used in a major infrastructure project.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Construction</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project5">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="woodworking">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kitchen Cabinetry" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Custom Kitchen Cabinetry</h3>
+                        <p class="text-gray-600 mb-4">Precision tools used to create custom kitchen cabinets with intricate detailing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Woodworking</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project6">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1523413363574-c30aa5c2d6ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bathroom Remodel" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Luxury Bathroom Remodel</h3>
+                        <p class="text-gray-600 mb-4">Specialized tools for precision tiling and fixture installation in a high-end bathroom renovation.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Renovation</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project7">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="industrial">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Manufacturing Equipment" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Manufacturing Equipment Setup</h3>
+                        <p class="text-gray-600 mb-4">Professional-grade tools used to install and calibrate precision manufacturing equipment.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Industrial</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project8">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden" data-category="construction">
+                    <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Residential Construction" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Residential Housing Development</h3>
+                        <p class="text-gray-600 mb-4">A large-scale residential construction project utilizing our complete range of power tools.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm bg-gray-200 text-gray-800 py-1 px-3 rounded-full">Construction</span>
+                            <button class="view-more text-accent hover:text-red-700 font-bold" data-id="project9">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h2 id="modal-title" class="text-3xl font-bold"></h2>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="modal-content" class="space-y-6">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-accent text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Let us help you find the perfect tools for your next construction, renovation, or DIY project.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg transition duration-300">Contact Us</a>
+                <a href="services.html" class="bg-primary hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PowerTools Pro</h3>
+                    <p class="mb-4">Your trusted partner for professional power and hand tools since 2012.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-accent">Contact Us</a></li>
+                        <li><a href="about.html" class="hover:text-accent">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-accent">Power Tools</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Hand Tools</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Accessories</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Battery Holding Machines</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Spares & Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>123 Tool Street, Workshop City, TC 12345</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>info@powertoolspro.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM<br>Sun: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 PowerTools Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Portfolio Filter
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active', 'bg-accent', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active', 'bg-accent', 'text-white');
+                this.classList.remove('bg-gray-200', 'text-gray-800');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Filter items
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Project Modal
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+
+        // Project Details
+        const projectDetails = {
+            project1: {
+                title: "Commercial Building Project",
+                images: [
+                    "https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "A major commercial construction project for a 12-story office building in downtown. Our team provided a comprehensive suite of power tools and equipment that enabled the construction crew to complete the project ahead of schedule.",
+                tools: ["Heavy-Duty Drills", "Industrial Concrete Mixers", "Professional-Grade Saws", "High-Capacity Generators"],
+                client: "Metropolis Construction Co.",
+                completion: "June 2022"
+            },
+            project2: {
+                title: "Custom Furniture Workshop",
+                images: [
+                    "https://images.unsplash.com/photo-1565298931044-63c9b2405d2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Equipped a high-end furniture workshop with precision woodworking tools for creating bespoke furniture pieces. The client needed tools that could deliver exceptional accuracy and finish quality for their luxury clientele.",
+                tools: ["Precision Routers", "Fine-Cut Saws", "Detail Sanders", "Specialized Joinery Tools"],
+                client: "Artisan Woodcraft Studios",
+                completion: "March 2023"
+            },
+            project3: {
+                title: "Complete Home Renovation",
+                images: [
+                    "https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1523413363574-c30aa5c2d6ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "A comprehensive home renovation project that transformed a 1970s property into a modern, energy-efficient home. Our versatile tool solutions helped the contractors tackle everything from demolition to fine finishing work.",
+                tools: ["Multi-Purpose Power Tools", "Demolition Equipment", "Precision Measuring Tools", "Finishing Sanders and Sprayers"],
+                client: "Renovate & Restore Inc.",
+                completion: "November 2022"
+            },
+            project4: {
+                title: "Industrial Facility Maintenance",
+                images: [
+                    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Provided specialized maintenance tools for a large manufacturing facility. The client needed durable, reliable tools that could withstand continuous use in a demanding industrial environment while maintaining precision.",
+                tools: ["Industrial Torque Wrenches", "Calibrated Testing Equipment", "Heavy-Duty Power Tools", "Specialized Diagnostic Tools"],
+                client: "Global Manufacturing Solutions",
+                completion: "Ongoing Maintenance Contract"
+            },
+            project5: {
+                title: "Bridge Construction Project",
+                images: [
+                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Supplied heavy-duty tools and equipment for a major bridge construction project. The tools needed to perform reliably in challenging outdoor conditions and meet strict engineering specifications.",
+                tools: ["Industrial Concrete Drills", "Heavy-Duty Fastening Systems", "Specialized Cutting Equipment", "High-Capacity Generators"],
+                client: "State Infrastructure Department",
+                completion: "August 2022"
+            },
+            project6: {
+                title: "Custom Kitchen Cabinetry",
+                images: [
+                    "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1565298931044-63c9b2405d2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Provided precision woodworking tools for a custom kitchen cabinet manufacturer. The client needed tools that could deliver consistent quality across multiple installations while maintaining efficiency.",
+                tools: ["Cabinet-Grade Table Saws", "Precision Routers", "Detail Sanders", "Professional Finishing Equipment"],
+                client: "Elite Kitchen Designs",
+                completion: "January 2023"
+            },
+            project7: {
+                title: "Luxury Bathroom Remodel",
+                images: [
+                    "https://images.unsplash.com/photo-1523413363574-c30aa5c2d6ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Equipped contractors with specialized tools for a high-end bathroom renovation project. The work required precision cutting and installation of expensive materials with zero margin for error.",
+                tools: ["Wet Tile Saws", "Precision Measuring Equipment", "Diamond-Tipped Drill Bits", "Specialized Plumbing Tools"],
+                client: "Luxury Home Renovations",
+                completion: "April 2023"
+            },
+            project8: {
+                title: "Manufacturing Equipment Setup",
+                images: [
+                    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Provided professional-grade tools for the installation and calibration of precision manufacturing equipment. The tools needed to meet strict tolerances and ensure the machinery would operate at peak efficiency.",
+                tools: ["Calibrated Torque Tools", "Precision Alignment Equipment", "Specialized Assembly Tools", "Digital Measurement Systems"],
+                client: "Advanced Manufacturing Technologies",
+                completion: "October 2022"
+            },
+            project9: {
+                title: "Residential Housing Development",
+                images: [
+                    "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                ],
+                description: "Supplied a complete range of power tools for a 50-unit residential housing development. The contractor needed reliable, efficient tools that could be used across multiple crews working simultaneously.",
+                tools: ["Framing Nailers", "Circular Saws", "Cordless Drill Systems", "Concrete Finishing Equipment"],
+                client: "Horizon Home Builders",
+                completion: "May 2023"
+            }
+        };
+
+        // Open Modal with Project Details
+        document.querySelectorAll('.view-more').forEach(button => {
+            button.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-id');
+                const project = projectDetails[projectId];
+                
+                if (project) {
+                    modalTitle.textContent = project.title;
+                    
+                    let content = `
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                    `;
+                    
+                    project.images.forEach(image => {
+                        content += `<img src="${image}" alt="${project.title}" class="rounded-lg shadow-md w-full h-64 object-cover">`;
+                    });
+                    
+                    content += `
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2">Project Description</h3>
+                            <p class="text-gray-600">${project.description}</p>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2">Tools Used</h3>
+                            <ul class="list-disc pl-5 text-gray-600">
+                    `;
+                    
+                    project.tools.forEach(tool => {
+                        content += `<li>${tool}</li>`;
+                    });
+                    
+                    content += `
+                            </ul>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Client</h3>
+                                <p class="text-gray-600">${project.client}</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Completion Date</h3>
+                                <p class="text-gray-600">${project.completion}</p>
+                            </div>
+                        </div>
+                    `;
+                    
+                    modalContent.innerHTML = content;
+                    modal.classList.remove('hidden');
+                }
+            });
+        });
+
+        // Close Modal
+        closeModal.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+
+        // Close Modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

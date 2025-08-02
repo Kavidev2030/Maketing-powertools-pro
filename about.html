@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PowerTools Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        accent: '#ff4d4d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">PowerTools Pro</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-accent">Home</a>
+                    <a href="services.html" class="hover:text-accent">Services</a>
+                    <a href="portfolio.html" class="hover:text-accent">Portfolio</a>
+                    <a href="contact.html" class="hover:text-accent">Contact Us</a>
+                    <a href="about.html" class="hover:text-accent border-b-2 border-accent">About Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 pb-4">
+            <div class="container mx-auto px-4 py-2 space-y-3">
+                <a href="index.html" class="block hover:text-accent">Home</a>
+                <a href="services.html" class="block hover:text-accent">Services</a>
+                <a href="portfolio.html" class="block hover:text-accent">Portfolio</a>
+                <a href="contact.html" class="block hover:text-accent">Contact Us</a>
+                <a href="about.html" class="block text-accent">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
+            <p class="text-xl max-w-3xl mx-auto">Discover the story behind PowerTools Pro and our commitment to quality, innovation, and customer satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1581147036324-c47a03a81d48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Workshop with tools" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2012, PowerTools Pro began as a small workshop in Workshop City with a simple mission: to provide high-quality tools that professionals could rely on. Our founder, John Smith, a master craftsman with over 20 years of experience, was frustrated with the lack of durable and efficient tools in the market.</p>
+                    <p class="text-gray-600 mb-4">What started as a small operation selling hand-crafted tools to local contractors has grown into a nationwide supplier of premium power tools, hand tools, and accessories. Throughout our growth, we've maintained our commitment to quality, durability, and customer satisfaction.</p>
+                    <p class="text-gray-600">Today, PowerTools Pro serves thousands of professionals and hobbyists across the country, offering a comprehensive range of tools from over 100 global brands. We've expanded our services to include tool rentals, repairs, and customized solutions for specific industries, all while maintaining the personal touch and expertise that set us apart from the beginning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Mission & Vision</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Guiding principles that drive everything we do at PowerTools Pro.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <div class="bg-accent w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Our Mission</h3>
+                    <p class="text-gray-600 text-center">To empower professionals and hobbyists with high-quality, reliable tools that enhance productivity, precision, and safety. We are committed to providing exceptional customer service, expert advice, and innovative solutions that help our customers achieve their goals.</p>
+                </div>
+                
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <div class="bg-accent w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Our Vision</h3>
+                    <p class="text-gray-600 text-center">To be the leading provider of innovative tool solutions, recognized for our quality products, technical expertise, and commitment to sustainability. We aim to revolutionize the industry by integrating AI technology with traditional tools, creating smarter, more efficient solutions for the modern craftsman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Core Values</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The principles that guide our decisions and define our company culture.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Quality</h3>
+                    <p class="text-gray-600">We are committed to providing tools and services of the highest quality, ensuring durability, reliability, and performance in every product we offer.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Innovation</h3>
+                    <p class="text-gray-600">We continuously seek new ways to improve our products and services, embracing technological advancements and creative solutions to meet evolving customer needs.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Customer Focus</h3>
+                    <p class="text-gray-600">We prioritize our customers' needs and satisfaction, providing personalized service, expert advice, and solutions tailored to their specific requirements.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Expertise</h3>
+                    <p class="text-gray-600">We pride ourselves on our deep knowledge of tools and their applications, continuously developing our skills and understanding to provide expert guidance to our customers.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sustainability</h3>
+                    <p class="text-gray-600">We are committed to environmentally responsible practices, offering energy-efficient tools, promoting recycling, and minimizing waste in our operations.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Integrity</h3>
+                    <p class="text-gray-600">We conduct our business with honesty, transparency, and ethical standards, building trust with our customers, partners, and employees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Milestones Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Journey</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Key milestones in our company's history that have shaped who we are today.</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-accent"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2012 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2012</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">Company Founded</h4>
+                                <p class="text-gray-600">PowerTools Pro was established by John Smith in a small workshop, offering a limited selection of hand-crafted tools to local contractors.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- 2014 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right"></div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2014</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">First Retail Store</h4>
+                                <p class="text-gray-600">Opened our first retail location in Workshop City, expanding our product range to include power tools from leading manufacturers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2016 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2016</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">Online Store Launch</h4>
+                                <p class="text-gray-600">Launched our e-commerce platform, making our products available nationwide and introducing our tool rental service.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- 2018 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right"></div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2018</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">Expansion to 5 Locations</h4>
+                                <p class="text-gray-600">Opened four additional retail stores across the country and established partnerships with over 50 global tool manufacturers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2020 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2020</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">AI Tool Recommendation System</h4>
+                                <p class="text-gray-600">Introduced our innovative AI-powered tool recommendation system, helping customers find the perfect tools for their specific projects.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- 2022 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right"></div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2022</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">Sustainability Initiative</h4>
+                                <p class="text-gray-600">Launched our Green Tools program, focusing on environmentally friendly products and implementing sustainable practices across all operations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2023 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold mb-2">2023</h3>
+                                <h4 class="text-lg font-semibold text-accent mb-2">Today & Beyond</h4>
+                                <p class="text-gray-600">Continuing to grow and innovate, with plans to expand our AI capabilities, introduce new product lines, and open additional locations to better serve our customers.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-12 h-12 rounded-full bg-accent border-4 border-white absolute left-1/2 transform -translate-x-1/2"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Leadership Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Meet the experts behind PowerTools Pro who drive our mission and vision forward.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="John Smith" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">John Smith</h3>
+                        <p class="text-accent font-medium mb-3">Founder & CEO</p>
+                        <p class="text-gray-600 mb-4">With over 25 years of experience in the tool industry, John's expertise and vision continue to guide our company's growth and innovation.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Sarah Johnson" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Sarah Johnson</h3>
+                        <p class="text-accent font-medium mb-3">Chief Technology Officer</p>
+                        <p class="text-gray-600 mb-4">Sarah leads our technology initiatives, including our AI tool recommendation system and digital platforms, bringing innovation to every aspect of our business.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Michael Chen" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Michael Chen</h3>
+                        <p class="text-accent font-medium mb-3">Operations Director</p>
+                        <p class="text-gray-600 mb-4">Michael oversees our supply chain, inventory management, and retail operations, ensuring efficient processes and exceptional customer experiences.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Emily Rodriguez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Emily Rodriguez</h3>
+                        <p class="text-accent font-medium mb-3">Product Development Manager</p>
+                        <p class="text-gray-600 mb-4">Emily leads our product research and development team, identifying emerging tool technologies and ensuring our offerings meet the highest standards.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Certifications & Partners</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're proud to be recognized by industry leaders and to partner with top brands.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- Certification/Partner 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=ISO+Certified" alt="ISO Certification" class="max-h-16">
+                </div>
+                
+                <!-- Certification/Partner 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=ANSI" alt="ANSI Member" class="max-h-16">
+                </div>
+                
+                <!-- Certification/Partner 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=Green+Business" alt="Green Business Certified" class="max-h-16">
+                </div>
+                
+                <!-- Certification/Partner 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=Tool+Association" alt="National Tool Association" class="max-h-16">
+                </div>
+                
+                <!-- Certification/Partner 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=Safety+First" alt="Safety First Certified" class="max-h-16">
+                </div>
+                
+                <!-- Certification/Partner 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=Quality+Assured" alt="Quality Assured" class="max-h-16">
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Our Brand Partners</h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <!-- Brand 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/120x60?text=Brand+1" alt="Brand Partner 1" class="max-h-12">
+                    </div>
+                    
+                    <!-- Brand 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/120x60?text=Brand+2" alt="Brand Partner 2" class="max-h-12">
+                    </div>
+                    
+                    <!-- Brand 3 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/120x60?text=Brand+3" alt="Brand Partner 3" class="max-h-12">
+                    </div>
+                    
+                    <!-- Brand 4 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/120x60?text=Brand+4" alt="Brand Partner 4" class="max-h-12">
+                    </div>
+                    
+                    <!-- Brand 5 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/120x60?text=Brand+5" alt="Brand Partner 5" class="max-h-12">
+                    </div>
+                    
+                    <!-- Brand 6 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/120x60?text=Brand+6" alt="Brand Partner 6" class="max-h-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Experience the PowerTools Pro Difference?</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8">Join thousands of satisfied customers who trust us for their tool needs. Whether you're a professional contractor or a weekend DIY enthusiast, we have the right tools for your project.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="services.html" class="bg-accent hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Explore Our Services</a>
+                <a href="contact.html" class="bg-transparent hover:bg-white hover:text-primary text-white font-bold py-3 px-8 border-2 border-white rounded-lg transition duration-300">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PowerTools Pro</h3>
+                    <p class="mb-4">Your trusted partner for professional power and hand tools since 2012.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-accent">Contact Us</a></li>
+                        <li><a href="about.html" class="hover:text-accent">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-accent">Power Tools</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Hand Tools</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Accessories</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Battery Holding Machines</a></li>
+                        <li><a href="services.html" class="hover:text-accent">Spares & Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>123 Tool Street, Workshop City, TC 12345</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>info@powertoolspro.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM<br>Sun: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 PowerTools Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
